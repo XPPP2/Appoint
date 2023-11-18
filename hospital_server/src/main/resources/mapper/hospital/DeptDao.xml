@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wfuhui.modules.hospital.dao.DeptDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.wfuhui.modules.hospital.entity.DeptEntity" id="deptMap">
+        <result property="id" column="id"/>
+        <result property="deptName" column="dept_name"/>
+        <result property="hospitalId" column="hospital_id"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+	<select id="queryObject" resultType="com.wfuhui.modules.hospital.entity.DeptEntity">
+		select * from hs_dept where id = #{value}
+	</select>
+
+	<select id="queryList" resultType="com.wfuhui.modules.hospital.entity.DeptEntity">
+		select d.*, h.hospital_name as 'hospital.hospitalName' from hs_dept d left join hs_hospital h on h.id = d.hospital_id
+		<where>
+			<if test="hospitalId != null">
+				d.hospital_id = #{hospitalId}
+			</if>
+		</where>
+        <choose>
+            <when test="sidx != null and sidx.trim() != ''">
+                order by ${sidx} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="queryTotal" resultType="int">
+		select count(*) from hs_dept 
+	</select>
+	 
+	<insert id="save" parameterType="com.wfuhui.modules.hospital.entity.DeptEntity" useGeneratedKeys="true" keyProperty="id">
+		insert into hs_dept
+		(
+			`dept_name`, 
+			`hospital_id`, 
+			`create_time`
+		)
+		values
+		(
+			#{deptName}, 
+			#{hospitalId}, 
+			#{createTime}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.wfuhui.modules.hospital.entity.DeptEntity">
+		update hs_dept 
+		<set>
+			<if test="deptName != null">`dept_name` = #{deptName}, </if>
+			<if test="hospitalId != null">`hospital_id` = #{hospitalId}, </if>
+			<if test="createTime != null">`create_time` = #{createTime}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="delete">
+		delete from hs_dept where id = #{value}
+	</delete>
+	
+	<delete id="deleteBatch">
+		delete from hs_dept where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>
