@@ -81,7 +81,7 @@ export default {
               that.$router.push("/login");
             }else{
               that.errorMsg = r.data.msg;
-              //that.$message.error(r.data.msg);
+              that.$message.error(r.data.msg);
             }
         })
       }

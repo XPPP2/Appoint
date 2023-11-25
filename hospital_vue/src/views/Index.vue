@@ -13,24 +13,34 @@
                     </el-carousel-item>
                   </el-carousel>
 
-                  <!--医生-->
-                  <div class="title">Doctors</div>
+
+                  <div class="title">Doctor</div>
                   <el-row :gutter="10">
                     <el-col :span="4" v-for="(o, index) in doctorList" :key="index" style="margin-bottom: 20px">
                       <el-card :body-style="{ padding: '0px' }" >
-
-
+                        <!-- <img :src="o.picUrl" class="image" style="width: 100%">
+                        <div style="padding: 14px;">
+                          <div class="name">{{o.realName}}</div>
+                          <div class="bottom clearfix">
+                            <el-button type="text" class="button" @click="detail(o.id)">Detail>></el-button>
+                          </div>
+                        </div> -->
                       </el-card>
                     </el-col>
                   </el-row>
 
                   <div class="title">Hospital Info</div>
                   <el-row :gutter="10">
-
+                    <!-- <el-col :span="16" v-html="hospital.remark"></el-col>
+                    <el-col :span="8">
+                      <h3>{{hospital.hospitalName}}</h3>
+                      <p>Phone：{{hospital.mobile}}</p>
+                      <p>Address：{{hospital.address}}</p>
+                    </el-col> -->
                   </el-row>
-                
+
                 </div>
-                
+
               </el-main>
             </el-container>
         </el-container>
@@ -67,20 +77,45 @@ export default {
         }
       )
     },
-
+    //查询医生
+    getDoctor: function(){
+      var that = this;
+      this.$axios({url: this.domain + "/api/doctor/list", params: {}}).then(
+        function(res){
+          var r = res.data;
+          console.log(r)
+          if(r.code == 0){
+            that.doctorList = r.doctorList;
+          }
+        }
+      )
+    },
+    //查询医院
+    getHospital: function(){
+      var that = this;
+      this.$axios({url: this.domain + "/api/hospital/detail", params: {id: 1}}).then(
+        function(res){
+          var r = res.data;
+          console.log(r)
+          if(r.code == 0){
+            that.hospital = r.hospital;
+          }
+        }
+      )
+    },
     detail(id){
       this.$router.push({path: "doctor", query: {id: id}});
     }
   },
-  
+
   created(){
     var user = localStorage.getItem("fuser");
     if(user){
         this.user = JSON.parse(user);
     }
-    this.getAdvert();
-    //this.getDoctor();
-    //this.getHospital();
+    this.getAdvert()
+    this.getDoctor();
+    this.getHospital()
     
   }
 };

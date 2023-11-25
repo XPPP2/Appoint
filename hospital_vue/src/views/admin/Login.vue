@@ -2,8 +2,8 @@
     <div>
       <el-container>
         <el-header>
-          <div style="width: 1280px; margin: 0 auto" class="header">
-          <el-link class="title" href="/#/">Hospital Appointment</el-link>
+          <div class="header">
+          <el-link href="/#/" class="title">Hospital Appointment</el-link>
           </div>
         </el-header>
         <el-main>
@@ -19,14 +19,13 @@
                 </div>
                 <el-form>
                   <el-form-item>
-                      <el-input v-model="loginForm.loginName" placeholder="Username"></el-input>
+                      <el-input v-model="loginForm.username" placeholder="Username"></el-input>
                   </el-form-item>
                   <el-form-item>
                       <el-input v-model="loginForm.password" placeholder="Password" type="password"></el-input>
                   </el-form-item>
                   <el-form-item>
-                      <el-button type="primary" @click="login"> Login </el-button>
-                      <el-button @click="register">Register</el-button>
+                      <el-button type="primary" @click="login">Login</el-button>
                   </el-form-item>
                 </el-form>
               </el-card>
@@ -39,14 +38,14 @@
 </template>
 <script>
 export default {
-  name: "Login",
+  name: "AdminLogin",
   data() {
     return {
       errorMsg: '',
-      loginImg: require('../assets/img/login-banner.jpg'),
       user: null,
+      loginImg: require('../../assets/img/login-banner.jpg'),
       loginForm: {
-        loginName: "",
+        username: "",
         password: "",
       },
     };
@@ -54,29 +53,26 @@ export default {
   methods: {
       login(){
         var that = this;
-        var data = "loginName="+that.loginForm.loginName+"&password="+that.loginForm.password;
+        var data = "username="+that.loginForm.username+"&password="+that.loginForm.password+"&captcha="
         this.$axios({
             method: 'post',
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
             },
-            url: that.domain + '/api/login',
+            url: that.domain + '/sys/login',
             data: data
         }).then(function(res){
-            console.log(res)
+            
             if(res.data.code == 0){//登录成功
-              localStorage.setItem("ftoken", res.data.token);
-              localStorage.setItem("fuser", JSON.stringify(res.data.member));
-              that.$router.push("/");
+              localStorage.setItem("atoken", res.data.token);
+              localStorage.setItem("auser", JSON.stringify(res.data.user));
+              that.$router.push("admin_index");
             }else{
               that.errorMsg = res.data.msg;
               that.$message.error(res.data.msg);
             }
         })
         
-      },
-      register(){
-        this.$router.push("register");
       }
   },
   created(){

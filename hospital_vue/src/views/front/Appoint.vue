@@ -8,22 +8,22 @@
             <el-row style="margin-top: 20px" :gutter="10">
               <el-col :span="24">
                 <el-form :model="appoint" label-width="120px">
-                  <el-form-item label="姓名">
+                  <el-form-item label="Name">
                     <el-input v-model="appoint.realName"></el-input>
                   </el-form-item>
-                  <el-form-item label="手机号码">
+                  <el-form-item label="Phone">
                     <el-input v-model="appoint.mobile"></el-input>
                   </el-form-item>
-                  <el-form-item label="性别" hidden>
+                  <el-form-item label="Gender" hidden>
                     <el-radio-group v-model="appoint.gender">
-                      <el-radio label="0" value="0">女</el-radio>
-                      <el-radio label="1" value="1">男</el-radio>
+                      <el-radio label="0" value="0">F</el-radio>
+                      <el-radio label="1" value="1">M</el-radio>
                     </el-radio-group>
                   </el-form-item>
-                  <el-form-item label="科室">
+                  <el-form-item label="Department">
                     <el-select
                       v-model="appoint.deptId"
-                      placeholder="请选择"
+                      placeholder="Choose"
                       @change="changeDept"
                     >
                       <el-option
@@ -35,10 +35,10 @@
                       </el-option>
                     </el-select>
                   </el-form-item>
-                  <el-form-item label="医生">
+                  <el-form-item label="Doctor">
                     <el-select
                       v-model="appoint.doctorId"
-                      placeholder="请选择"
+                      placeholder="Choose"
                       @change="changeDoctor"
                     >
                       <el-option
@@ -51,17 +51,17 @@
                     </el-select>
                   </el-form-item>
 
-                  <el-form-item label="日期">
+                  <el-form-item label="Date">
                     <el-date-picker
                       v-model="appoint.appointTime"
                       type="date"
                       value-format="yyyy-MM-dd"
                       @change="changeDate"
-                      placeholder="预约日期"
+                      placeholder="Appointment Date"
                     >
                     </el-date-picker>
                   </el-form-item>
-                  <el-form-item label="时间">
+                  <el-form-item label="Time">
                     <el-col
                       :span="4"
                       v-for="time in timeList"
@@ -73,17 +73,17 @@
                         @click="clickTime(time.id)"
                       >
                         <div>{{ time.startTime }}~{{ time.endTime }}</div>
-                        <span>剩余{{ time.maxPeople - time.people }}人</span>
+                        <span>Remain:{{ time.maxPeople - time.people }}</span>
                       </div>
                     </el-col>
                   </el-form-item>
 
-                  <el-form-item label="备注">
+                  <el-form-item label="Note">
                     <el-input v-model="appoint.remark" type="textarea"></el-input>
                   </el-form-item>
                   <el-form-item>
                     <el-button type="primary" @click="onSubmit"
-                      >立即预约</el-button
+                      >Appoint</el-button
                     >
                   </el-form-item>
                 </el-form>

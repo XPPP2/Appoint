@@ -10,15 +10,15 @@
                   <el-col :span="4">
                     <div>
                       <el-menu router default-active="1">
-                        <el-menu-item route="user" index="1">用户信息</el-menu-item>
-                        <el-menu-item route="appoint_mine" index="2">我的挂号</el-menu-item>
-                        <el-menu-item route="case_mine" index="3">我的病例</el-menu-item>
+                        <el-menu-item route="user" index="1">User Info</el-menu-item>
+                        <el-menu-item route="appoint_mine" index="2">My Appointment</el-menu-item>
+                        <el-menu-item route="case_mine" index="3">My Result</el-menu-item>
                       </el-menu>
                     </div>
                   </el-col>
                   <el-col :span="20">
                   <el-form :model="member" label-width="120px">
-                    <el-form-item label="头像">
+                    <el-form-item label="Head Pic">
                         <el-upload
                         class="avatar-uploader"
                         action="http://127.0.0.1:8080/api/fileupload/upload"
@@ -29,16 +29,16 @@
                         <i v-else class="el-icon-plus avatar-uploader-icon"></i>
                         </el-upload>
                     </el-form-item>
-                    <el-form-item label="昵称">
+                    <el-form-item label="Nick Name">
                         <el-input v-model="member.nickname"></el-input>
                     </el-form-item>
-                    <el-form-item label="姓名">
+                    <el-form-item label="Name">
                         <el-input v-model="member.realName"></el-input>
                     </el-form-item>
-                    <el-form-item label="手机号码">
+                    <el-form-item label="Phone">
                         <el-input v-model="member.mobile"></el-input>
                     </el-form-item>
-                    <el-form-item label="性别">
+                    <el-form-item label="Gender">
                         <el-radio-group v-model="member.gender">
                           <el-radio label="0" value="0">女</el-radio>
                           <el-radio label="1" value="1">男</el-radio>
@@ -46,7 +46,7 @@
                     </el-form-item>
 
                     <el-form-item>
-                        <el-button type="primary" @click="onSubmit">保存</el-button>
+                        <el-button type="primary" @click="onSubmit">Save</el-button>
                     </el-form-item>
                     </el-form>
                   </el-col>
