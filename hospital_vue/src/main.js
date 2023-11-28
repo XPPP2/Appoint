@@ -7,6 +7,7 @@ import echarts from 'echarts'
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import enLocale from 'element-ui/lib/locale/lang/en'
 import App from './App.vue'
 import Utils from './assets/js/common.js'
 import './assets/css/common.css'

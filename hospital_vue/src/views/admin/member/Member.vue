@@ -8,12 +8,12 @@
                 <mainSidebar :active="active"></mainSidebar>
                 <el-main>
                     <el-form :inline="true" :model="q">
-                        <el-form-item label="昵称">
-                            <el-input v-model="q.nickname" placeholder="昵称"></el-input>
+                        <el-form-item label="NickName">
+                            <el-input v-model="q.nickname" placeholder="NickName"></el-input>
                         </el-form-item>
                         <el-form-item>
-                            <el-button type="primary" @click="query">查询</el-button>
-                            <el-button type="danger" @click="del">删除</el-button>
+                            <el-button type="primary" @click="query">Search</el-button>
+                            <el-button type="danger" @click="del">Delete</el-button>
                         </el-form-item>
                     </el-form>
                         <el-table
@@ -26,7 +26,7 @@
                         </el-table-column>
                         <el-table-column
                             prop="avatarUrl"
-                            label="头像"
+                            label="HeadPicture"
                             >
                             <template slot-scope="scope">
                                 <el-image
@@ -36,27 +36,27 @@
                         </el-table-column>
                         <el-table-column
                             prop="nickname"
-                            label="昵称"
+                            label="NickName"
                             >
                         </el-table-column>
                         <el-table-column
                             prop="loginName"
-                            label="登录名"
+                            label="UserName"
                             >
                         </el-table-column>
                         <el-table-column
                             prop="realName"
-                            label="姓名"
+                            label="Name"
                             >
                         </el-table-column>
                         <el-table-column
                             prop="mobile"
-                            label="手机号"
+                            label="Phone"
                             >
                         </el-table-column>
                         <el-table-column
                             prop="createTime"
-                            label="注册时间"
+                            label="EnrollDate"
                             >
                         </el-table-column>
                         </el-table>
@@ -114,7 +114,7 @@ export default {
       },
       del(){
         if(this.ids.length == 0){
-            this.$message.info("请选择数据");
+            this.$message.info("Please select one.");
             return;
         }
         var that = this;
