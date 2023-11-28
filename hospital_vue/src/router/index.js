@@ -12,7 +12,7 @@ import AdminIndex from '../views/admin/Index'
 import AdminLogin from '../views/admin/Login'
 import AdminMember from '../views/admin/member/Member'
 // import AdminHospital from '../views/admin/hospital/Hospital'
-// import AdminDept from '../views/admin/hospital/Dept'
+import AdminDept from '../views/admin/hospital/Dept'
 // import AdminDoctor from '../views/admin/hospital/Doctor'
 // import AdminNotice from '../views/admin/sys/Notice'
 // import AdminUser from '../views/admin/sys/User'
@@ -66,11 +66,11 @@ export default new Router({
             name: 'AdminMember',
             component: AdminMember
         },
-//         {
-//             path: '/admin_dept',
-//             name: 'AdminDept',
-//             component: AdminDept
-//         },
+        {
+            path: '/admin_dept',
+            name: 'AdminDept',
+            component: AdminDept
+        },
 //         {
 //             path: '/admin_doctor',
 //             name: 'AdminDoctor',
