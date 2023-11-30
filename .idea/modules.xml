@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Appoint.iml" filepath="$PROJECT_DIR$/.idea/Appoint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/AppointHospital.iml" filepath="$PROJECT_DIR$/.idea/AppointHospital.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TypeDoc/TypeDoc.iml" filepath="$PROJECT_DIR$/TypeDoc/TypeDoc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital_server/hospital_server.iml" filepath="$PROJECT_DIR$/hospital_server/hospital_server.iml" />
     </modules>
   </component>
 </project>

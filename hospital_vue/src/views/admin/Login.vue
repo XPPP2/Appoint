@@ -15,7 +15,7 @@
           <el-col :span="10">
               <el-card class="box-card login-box">
                 <div slot="header">
-                  <span>Login</span>
+                  <span>User</span>
                 </div>
                 <el-form>
                   <el-form-item>
@@ -25,7 +25,7 @@
                       <el-input v-model="loginForm.password" placeholder="Password" type="password"></el-input>
                   </el-form-item>
                   <el-form-item>
-                      <el-button type="primary" @click="login">Login</el-button>
+                      <el-button type="primary" @click="login">User</el-button>
                   </el-form-item>
                 </el-form>
               </el-card>

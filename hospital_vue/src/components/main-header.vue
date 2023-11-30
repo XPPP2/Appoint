@@ -5,7 +5,7 @@
       <el-menu-item route="appoint" index="1">Make Appointment</el-menu-item>
     </el-menu>
     <span style="float: right">
-    <el-link href="/#/login" v-if="!user">Login</el-link>
+    <el-link href="/#/login" v-if="!user">User</el-link>
     <el-link href="/#/user" v-if="user">Welcome，{{user.loginName}}</el-link>
     <el-link @click="logout()" style="margin-left: 20px" v-if="user">Logout</el-link>
     <el-link href="/#/admin_index" style="margin-left: 20px" target="_blank">Manage</el-link>

@@ -19,18 +19,18 @@
                     
                     <div>
                       <p>{{doctor.realName}}</p>  
-                      <div>科室：{{doctor.dept.deptName}}</div>
-                      <div>姓名：{{doctor.realName}}</div>
-                      <div>电话：{{doctor.mobile}}</div>
+                      <div>Department：{{doctor.dept.deptName}}</div>
+                      <div>Name：{{doctor.realName}}</div>
+                      <div>Phone：{{doctor.mobile}}</div>
                     </div>
                   </div>
                 </el-col>
               </el-row>
               <el-row>
-                <div class="title">特长</div>
+                <div class="title">Skill</div>
                 <div style="margin-bottom: 20px">{{doctor.specialty}}</div>
 
-                <div class="title">详情</div>
+                <div class="title">Info</div>
                 <div>{{doctor.remark}}</div>
               </el-row>
                 </div>
