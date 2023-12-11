@@ -9,14 +9,14 @@
         <el-main>
           <div v-if="showList">
             <el-form :inline="true" :model="q">
-              <el-form-item label="姓名">
-                <el-input v-model="q.realName" placeholder="姓名"></el-input>
+              <el-form-item label="Name">
+                <el-input v-model="q.realName" placeholder="Name"></el-input>
               </el-form-item>
               <el-form-item>
-                <el-button type="primary" @click="query">查询</el-button>
-                <el-button type="warning" @click="add">新增</el-button>
-                <el-button type="success" @click="update">修改</el-button>
-                <el-button type="danger" @click="del">删除</el-button>
+                <el-button type="primary" @click="query">Search</el-button>
+                <el-button type="warning" @click="add">Add</el-button>
+                <el-button type="success" @click="update">Modify</el-button>
+                <el-button type="danger" @click="del">Delete</el-button>
               </el-form-item>
             </el-form>
 
@@ -27,7 +27,7 @@
             >
               <el-table-column type="selection" width="55"> </el-table-column>
 
-              <el-table-column prop="picUrl" label="头像">
+              <el-table-column prop="picUrl" label="Headpic">
                 <template slot-scope="scope">
                   <el-image
                     style="width: 80px; height: 80px"
@@ -35,14 +35,14 @@
                   ></el-image>
                 </template>
               </el-table-column>
-              <el-table-column prop="realName" label="医生名称">
+              <el-table-column prop="realName" label="DoctorName">
               </el-table-column>
-              <el-table-column prop="mobile" label="电话"> </el-table-column>
+              <el-table-column prop="mobile" label="Phone"> </el-table-column>
 
-              <el-table-column prop="dept.deptName" label="科室">
+              <el-table-column prop="dept.deptName" label="Department">
               </el-table-column>
 
-              <el-table-column prop="createTime" label="创建时间">
+              <el-table-column prop="createTime" label="CreateDate">
               </el-table-column>
             </el-table>
             <el-pagination
@@ -58,7 +58,7 @@
           </div>
           <div v-if="!showList">
             <el-form :model="doctor" label-width="120px">
-              <el-form-item label="头像">
+              <el-form-item label="Headpic">
                 <el-upload
                   class="avatar-uploader"
                   action="http://127.0.0.1:8080/api/fileupload/upload"
@@ -73,15 +73,15 @@
                   <i v-else class="el-icon-plus avatar-uploader-icon"></i>
                 </el-upload>
               </el-form-item>
-              <el-form-item label="医生名称">
+              <el-form-item label="DoctorName">
                 <el-input v-model="doctor.realName"></el-input>
               </el-form-item>
-              <el-form-item label="电话">
+              <el-form-item label="Phone">
                 <el-input v-model="doctor.mobile"></el-input>
               </el-form-item>
 
-              <el-form-item label="科室">
-                <el-select v-model="doctor.deptId" placeholder="请选择">
+              <el-form-item label="Department">
+                <el-select v-model="doctor.deptId" placeholder="Please select">
                   <el-option
                     v-for="item in deptList"
                     :key="item.id"
@@ -91,16 +91,16 @@
                   </el-option>
                 </el-select>
               </el-form-item>
-              <el-form-item label="特长">
+              <el-form-item label="Skill">
                 <el-input v-model="doctor.specialty" type="textarea"></el-input>
               </el-form-item>
-              <el-form-item label="备注">
+              <el-form-item label="Note">
                 <el-input v-model="doctor.remark" type="textarea"></el-input>
               </el-form-item>
 
               <el-form-item>
-                <el-button type="primary" @click="onSubmit">保存</el-button>
-                <el-button @click="cancel">取消</el-button>
+                <el-button type="primary" @click="onSubmit">Save</el-button>
+                <el-button @click="cancel">Cancel</el-button>
               </el-form-item>
             </el-form>
           </div>
@@ -211,7 +211,7 @@ export default {
     },
     update() {
       if (this.ids.length != 1) {
-        this.$message.info("请选择一条数据");
+        this.$message.info("Please select one");
         return;
       }
       this.showList = false;
@@ -222,7 +222,7 @@ export default {
     },
     del() {
       if (this.ids.length == 0) {
-        this.$message.info("请选择数据");
+        this.$message.info("Please select");
         return;
       }
       var that = this;

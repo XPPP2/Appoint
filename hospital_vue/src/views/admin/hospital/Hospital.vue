@@ -9,7 +9,7 @@
         <el-main>
           <div v-if="!showList">
             <el-form :model="hospital" label-width="120px">
-              <el-form-item label="图片">
+              <el-form-item label="Picture">
                 <el-upload
                   class="avatar-uploader"
                   action="http://127.0.0.1:8080/api/fileupload/upload"
@@ -18,18 +18,18 @@
                   <i v-else class="el-icon-plus avatar-uploader-icon"></i>
                   </el-upload>
               </el-form-item>
-              <el-form-item label="医院名称">
+              <el-form-item label="Hospital Name">
                 <el-input v-model="hospital.hospitalName"></el-input>
               </el-form-item>              
               
-              <el-form-item label="联系电话">
+              <el-form-item label="Phone">
                 <el-input v-model="hospital.mobile"></el-input>
               </el-form-item>
-              <el-form-item label="地址">
+              <el-form-item label="Address">
                 <el-input v-model="hospital.address"></el-input>
               </el-form-item>
 
-              <el-form-item label="详情">
+              <el-form-item label="Detail">
                 <Toolbar
                     style="border-bottom: 1px solid #ccc; width: 100%;"
                     :editor="editor"
@@ -46,7 +46,7 @@
               </el-form-item>
 
               <el-form-item>
-                <el-button type="primary" @click="onSubmit">保存</el-button>
+                <el-button type="primary" @click="onSubmit">Save</el-button>
               </el-form-item>
             </el-form>
           </div>
@@ -80,7 +80,7 @@ export default {
         
       },
       editor: null,
-      editorConfig: { placeholder: '请输入内容...', MENU_CONF: {} }
+      editorConfig: { placeholder: 'Please input...', MENU_CONF: {} }
     };
   },
   components: {
@@ -136,7 +136,7 @@ export default {
     },
     update() {
       if (this.ids.length != 1) {
-        this.$message.info("请选择一条数据");
+        this.$message.info("Please select");
         return;
       }
       this.showList = false;
@@ -147,7 +147,7 @@ export default {
     },
     del() {
       if (this.ids.length == 0) {
-        this.$message.info("请选择数据");
+        this.$message.info("Please select");
         return;
       }
       var that = this;

@@ -28,17 +28,19 @@
                           type="selection"
                           width="55">
                         </el-table-column>
-						<el-table-column
+						
+																								                        <el-table-column
                             prop="deptName"
                             label="Department"
                             >
                         </el-table-column>
-						<el-table-column
+																	
+																		                        <el-table-column
                             prop="createTime"
-                            label="CreateDate"
+                            label="Date"
                             >
                         </el-table-column>
-						</el-table>
+												                        </el-table>
                         <el-pagination
                             @size-change="handleSizeChange"
                             @current-change="handleCurrentChange"
@@ -51,12 +53,12 @@
                         </div>
                         <div v-if="!showList">
                         <el-form :model="dept" label-width="120px">
-                        		<el-form-item label="Department">
+                        																								<el-form-item label="Department">
                             <el-input v-model="dept.deptName"></el-input>
                         </el-form-item>
                         																		
                         						                        <el-form-item>
-                            <el-button type="primary" @click="onSubmit">Save</el-button>
+                            <el-button type="primary" @click="onSubmit">保存</el-button>
                             <el-button @click="cancel">Cancel</el-button>
                         </el-form-item>
                         </el-form>
@@ -144,7 +146,7 @@ export default {
       },
       update(){
       	if(this.ids.length != 1){
-	        this.$message.info("Please select one.");
+	        this.$message.info("请选择一条数据");
 	        return;
         }
         this.showList = false
@@ -155,7 +157,7 @@ export default {
       },
       del(){
         if(this.ids.length == 0){
-            this.$message.info("Please select.");
+            this.$message.info("请选择数据");
             return;
         }
         var that = this;

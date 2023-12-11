@@ -9,14 +9,14 @@
         <el-main>
           <div v-if="showList">
             <el-form :inline="true" :model="q">
-              <el-form-item label="登录名">
-                <el-input v-model="q.loginName" placeholder="登录名"></el-input>
+              <el-form-item label="Username">
+                <el-input v-model="q.loginName" placeholder="Username"></el-input>
               </el-form-item>
               <el-form-item>
-                <el-button type="primary" @click="query">查询</el-button>
-                <el-button type="warning" @click="add">新增</el-button>
-                <el-button type="success" @click="update">修改</el-button>
-                <el-button type="danger" @click="del">删除</el-button>
+                <el-button type="primary" @click="query">Search</el-button>
+                <el-button type="warning" @click="add">Add</el-button>
+                <el-button type="success" @click="update">Modify</el-button>
+                <el-button type="danger" @click="del">Delete</el-button>
               </el-form-item>
             </el-form>
 
@@ -27,20 +27,20 @@
             >
               <el-table-column type="selection" width="55"> </el-table-column>
 
-              <el-table-column prop="username" label="用户名">
+              <el-table-column prop="username" label="Username">
               </el-table-column>
 
-              <el-table-column prop="email" label="邮箱"> </el-table-column>
-              <el-table-column prop="mobile" label="手机号"> </el-table-column>
-              <el-table-column prop="status" label="状态">
+              <el-table-column prop="email" label="Email"> </el-table-column>
+              <el-table-column prop="mobile" label="Phone"> </el-table-column>
+              <el-table-column prop="status" label="Status">
                 <template slot-scope="scope">
-                  <el-tag type="info" v-if="scope.row.status == 0">禁用</el-tag>
+                  <el-tag type="info" v-if="scope.row.status == 0">Unable</el-tag>
                   <el-tag type="primary" v-if="scope.row.status == 1"
-                    >启用</el-tag
+                    >Enable</el-tag
                   >
                 </template>
               </el-table-column>
-              <el-table-column prop="createTime" label="创建时间">
+              <el-table-column prop="createTime" label="CreateDate">
               </el-table-column>
             </el-table>
             <el-pagination
@@ -56,28 +56,28 @@
           </div>
           <div v-if="!showList">
             <el-form :model="user" label-width="120px">
-              <el-form-item label="用户名">
+              <el-form-item label="Username">
                 <el-input v-model="user.username"></el-input>
               </el-form-item>
-              <el-form-item label="密码">
+              <el-form-item label="Password">
                 <el-input v-model="user.password"></el-input>
               </el-form-item>
 
-              <el-form-item label="邮箱">
+              <el-form-item label="Email">
                 <el-input v-model="user.email"></el-input>
               </el-form-item>
-              <el-form-item label="手机号">
+              <el-form-item label="Phone">
                 <el-input v-model="user.mobile"></el-input>
               </el-form-item>
-              <el-form-item label="状态">
+              <el-form-item label="Status">
                 <el-radio-group v-model="user.status">
-                  <el-radio :label="0">禁用</el-radio>
-                  <el-radio :label="1">启用</el-radio>
+                  <el-radio :label="0">Unable</el-radio>
+                  <el-radio :label="1">Enable</el-radio>
                 </el-radio-group>
               </el-form-item>
               <el-form-item>
-                <el-button type="primary" @click="onSubmit">保存</el-button>
-                <el-button @click="cancel">取消</el-button>
+                <el-button type="primary" @click="onSubmit">Save</el-button>
+                <el-button @click="cancel">Cancel</el-button>
               </el-form-item>
             </el-form>
           </div>
@@ -176,7 +176,7 @@ export default {
     },
     update() {
       if (this.ids.length != 1) {
-        this.$message.info("请选择一条数据");
+        this.$message.info("Please select");
         return;
       }
       this.showList = false;
@@ -187,7 +187,7 @@ export default {
     },
     del() {
       if (this.ids.length == 0) {
-        this.$message.info("请选择数据");
+        this.$message.info("Please select");
         return;
       }
       var that = this;

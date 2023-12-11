@@ -1,7 +1,7 @@
 {
-  "name": "hospital",
-  "description": "hospitak appointment",
-  "author": "groupA",
+  "name": "wfuhui-hospital",
+  "description": "taobishe.cn",
+  "author": "qq2803180149",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --env.dev",

@@ -14,29 +14,29 @@
                   </el-carousel>
 
 
-                  <div class="title">Doctor</div>
+                  <div class="title">Doctors</div>
                   <el-row :gutter="10">
                     <el-col :span="4" v-for="(o, index) in doctorList" :key="index" style="margin-bottom: 20px">
                       <el-card :body-style="{ padding: '0px' }" >
-                        <!-- <img :src="o.picUrl" class="image" style="width: 100%">
+                        <img :src="o.picUrl" class="image" style="width: 100%">
                         <div style="padding: 14px;">
                           <div class="name">{{o.realName}}</div>
                           <div class="bottom clearfix">
                             <el-button type="text" class="button" @click="detail(o.id)">Detail>></el-button>
                           </div>
-                        </div> -->
+                        </div>
                       </el-card>
                     </el-col>
                   </el-row>
 
-                  <div class="title">Hospital Info</div>
+                  <div class="title">Hospital Description</div>
                   <el-row :gutter="10">
-                    <!-- <el-col :span="16" v-html="hospital.remark"></el-col>
+                    <el-col :span="16" v-html="hospital.remark"></el-col>
                     <el-col :span="8">
                       <h3>{{hospital.hospitalName}}</h3>
                       <p>Phone：{{hospital.mobile}}</p>
                       <p>Address：{{hospital.address}}</p>
-                    </el-col> -->
+                    </el-col>
                   </el-row>
 
                 </div>

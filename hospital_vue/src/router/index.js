@@ -7,15 +7,22 @@ import Register from '../views/Register'
 import Doctor from '../views/front/Doctor'
 import User from '../views/front/User'
 import Appoint from '../views/front/Appoint'
+import Pay from '../views/front/Pay'
+import AppointMine from '../views/front/AppointMine'
+import CaseMine from '../views/front/CaseMine'
 
 import AdminIndex from '../views/admin/Index'
 import AdminLogin from '../views/admin/Login'
 import AdminMember from '../views/admin/member/Member'
-// import AdminHospital from '../views/admin/hospital/Hospital'
+import AdminAdvert from '../views/admin/advert/Advert'
+import AdminHospital from '../views/admin/hospital/Hospital'
 import AdminDept from '../views/admin/hospital/Dept'
-// import AdminDoctor from '../views/admin/hospital/Doctor'
-// import AdminNotice from '../views/admin/sys/Notice'
-// import AdminUser from '../views/admin/sys/User'
+import AdminDoctor from '../views/admin/hospital/Doctor'
+import AdminAppoint from '../views/admin/appoint/Appoint'
+import AdminCase from '../views/admin/appoint/Case'
+import AdminSetting from '../views/admin/appoint/Setting'
+import AdminNotice from '../views/admin/sys/Notice'
+import AdminUser from '../views/admin/sys/User'
 
 Vue.use(Router)
 
@@ -35,7 +42,7 @@ export default new Router({
             path: '/login',
             name: 'Login',
             component: Login
-        },
+        }, 
         {
             path: '/doctor',
             name: 'Doctor',
@@ -52,6 +59,21 @@ export default new Router({
             component: Appoint
         },
         {
+            path: '/pay',
+            name: 'Pay',
+            component: Pay
+        },
+        {
+            path: '/appoint_mine',
+            name: 'AppointMine',
+            component: AppointMine
+        },      
+        {
+            path: '/case_mine',
+            name: 'CaseMine',
+            component: CaseMine
+        },     
+        {
             path: '/admin_index',
             name: 'AdminIndex',
             component: AdminIndex
@@ -67,29 +89,49 @@ export default new Router({
             component: AdminMember
         },
         {
+            path: '/admin_advert',
+            name: 'AdminAdvert',
+            component: AdminAdvert
+        },
+        {
+            path: '/admin_case',
+            name: 'AdminCase',
+            component: AdminCase
+        },
+        {
             path: '/admin_dept',
             name: 'AdminDept',
             component: AdminDept
         },
-//         {
-//             path: '/admin_doctor',
-//             name: 'AdminDoctor',
-//             component: AdminDoctor
-//         },
-//         {
-//             path: '/admin_hospital',
-//             name: 'AdminHospital',
-//             component: AdminHospital
-//         },
-//         {
-//             path: '/admin_notice',
-//             name: 'AdminNotice',
-//             component: AdminNotice
-//         },
-//         {
-//             path: '/admin_user',
-//             name: 'AdminUser',
-//             component: AdminUser
-//         }
-     ]
- })
+        {
+            path: '/admin_doctor',
+            name: 'AdminDoctor',
+            component: AdminDoctor
+        },
+        {
+            path: '/admin_appoint',
+            name: 'AdminAppoint',
+            component: AdminAppoint
+        },
+        {
+            path: '/admin_hospital',
+            name: 'AdminHospital',
+            component: AdminHospital
+        },
+        {
+            path: '/admin_setting',
+            name: 'AdminSetting',
+            component: AdminSetting
+        },
+        {
+            path: '/admin_notice',
+            name: 'AdminNotice',
+            component: AdminNotice
+        },
+        {
+            path: '/admin_user',
+            name: 'AdminUser',
+            component: AdminUser
+        }
+    ]
+})

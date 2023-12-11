@@ -10,9 +10,9 @@
                   <el-col :span="4">
                     <div>
                       <el-menu router default-active="3">
-                        <el-menu-item route="user" index="1">用户信息</el-menu-item>
-                        <el-menu-item route="appoint_mine" index="2">我的挂号</el-menu-item>
-                        <el-menu-item route="case_mine" index="3">我的病例</el-menu-item>
+                        <el-menu-item route="user" index="1">User Info</el-menu-item>
+                        <el-menu-item route="appoint_mine" index="2">My Appointment</el-menu-item>
+                        <el-menu-item route="case_mine" index="3">My Result</el-menu-item>
                       </el-menu>
                     </div>
                   </el-col>
@@ -23,28 +23,28 @@
                         
                         <el-table-column
                             prop="member.realName"
-                            label="姓名"
+                            label="Name"
                             >
                         </el-table-column>
                         <el-table-column
                             prop="member.mobile"
-                            label="电话"
+                            label="Phone"
                             >
                         </el-table-column>
 
                         <el-table-column
                             prop="result"
-                            label="诊断结果	">
+                            label="Result">
                         </el-table-column>
 
                         <el-table-column
                             prop="proposal"
-                            label="建议">
+                            label="Advice">
                         </el-table-column>
 
                         <el-table-column
                             prop="createTime"
-                            label="时间">
+                            label="Date">
                         </el-table-column>
                         
                         </el-table>

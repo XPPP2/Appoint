@@ -10,9 +10,9 @@
                   <el-col :span="4">
                     <div>
                       <el-menu router default-active="2">
-                        <el-menu-item route="user" index="1">用户信息</el-menu-item>
-                        <el-menu-item route="appoint_mine" index="2">我的挂号</el-menu-item>
-                        <el-menu-item route="case_mine" index="3">我的病例</el-menu-item>
+                        <el-menu-item route="user" index="1">User Info</el-menu-item>
+                        <el-menu-item route="appoint_mine" index="2">My Appointment</el-menu-item>
+                        <el-menu-item route="case_mine" index="3">My Result</el-menu-item>
                       </el-menu>
                     </div>
                   </el-col>
@@ -23,55 +23,55 @@
                         
                         <el-table-column
                             prop="user.realName"
-                            label="姓名"
+                            label="Name"
                             >
                         </el-table-column>
                         <el-table-column
                             prop="user.mobile"
-                            label="电话"
+                            label="Phone"
                             >
                         </el-table-column>
 
                         <el-table-column
                             prop="dept.deptName"
-                            label="科室">
+                            label="Department">
                         </el-table-column>
 
                         <el-table-column
                             prop="doctor.realName"
-                            label="医生">
+                            label="Doctor">
                         </el-table-column>
                         
                         <el-table-column
                             prop="appointTime"
-                            label="日期">
+                            label="Date">
                         </el-table-column>
 
                         <el-table-column
                             prop="time"
-                            label="时间">
+                            label="Time">
                         </el-table-column>
 
                         <el-table-column
                             prop="totalAmount"
-                            label="金额">
+                            label="Fee">
                         </el-table-column>
 
                         <el-table-column
                             prop="status"
-                            label="状态">
+                            label="Status">
                             <template slot-scope="scope">
-                              <el-tag type="info" v-if="scope.row.status == 0">已取消</el-tag>
-                              <el-tag type="primary" v-if="scope.row.status == 1">待付款</el-tag>
-                              <el-tag type="warning" v-if="scope.row.status == 2">预约中</el-tag>
-                              <el-tag type="danger" v-if="scope.row.status == 3">已完成</el-tag>
+                              <el-tag type="info" v-if="scope.row.status == 0">Canceled</el-tag>
+                              <el-tag type="primary" v-if="scope.row.status == 1">Unpaid</el-tag>
+                              <el-tag type="warning" v-if="scope.row.status == 2">Paid</el-tag>
+                              <el-tag type="danger" v-if="scope.row.status == 3">Finished</el-tag>
                             </template>
                         </el-table-column>
 
                         <el-table-column
                             prop="opt"
-                            width="60px"
-                            label="操作">
+                            width="80px"
+                            label="Note">
                             <template slot-scope="scope">
                               <el-link type="primary" v-if="scope.row.status == 1" @click="pay(scope.row.id)">支付</el-link>
                              

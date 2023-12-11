@@ -35,7 +35,7 @@
                   </el-form-item>
                   <el-form-item>
                       <el-button type="primary" @click="register">Register</el-button>
-                      <el-button @click="login"> User </el-button>
+                      <el-button @click="login"> Login </el-button>
                   </el-form-item>
                 </el-form>
               </el-card>

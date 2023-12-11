@@ -9,13 +9,13 @@
         <el-main>
           <div v-if="showList">
             <el-form :inline="true" :model="q">
-              <el-form-item label="姓名">
-                <el-input v-model="q.realName" placeholder="姓名"></el-input>
+              <el-form-item label="Name">
+                <el-input v-model="q.realName" placeholder="Name"></el-input>
               </el-form-item>
               <el-form-item>
-                <el-button type="primary" @click="query">查询</el-button>
-                <el-button type="warning" @click="complete">完成</el-button>
-                <el-button type="danger" @click="del">删除</el-button>
+                <el-button type="primary" @click="query">Search</el-button>
+                <el-button type="warning" @click="complete">Finish</el-button>
+                <el-button type="danger" @click="del">Delete</el-button>
               </el-form-item>
             </el-form>
 
@@ -26,32 +26,32 @@
             >
               <el-table-column type="selection" width="55"> </el-table-column>
 
-              <el-table-column prop="user.realName" label="用户">
+              <el-table-column prop="user.realName" label="User">
               </el-table-column>
-              <el-table-column prop="dept.deptName" label="科室">
+              <el-table-column prop="dept.deptName" label="Department">
               </el-table-column>
-              <el-table-column prop="doctor.realName" label="医生">
+              <el-table-column prop="doctor.realName" label="Doctor">
               </el-table-column>
-              <el-table-column prop="appointTime" label="预约日期">
+              <el-table-column prop="appointTime" label="Date">
               </el-table-column>
-              <el-table-column prop="time" label="预约时间"> </el-table-column>
-              <el-table-column prop="totalAmount" label="金额"> </el-table-column>
-              <el-table-column prop="status" label="状态">
+              <el-table-column prop="time" label="AppointDate"> </el-table-column>
+              <el-table-column prop="totalAmount" label="Fee"> </el-table-column>
+              <el-table-column prop="status" label="Status">
                 <template slot-scope="scope">
-                  <el-tag type="info" v-if="scope.row.status == 0">已取消</el-tag>
+                  <el-tag type="info" v-if="scope.row.status == 0">Canceled</el-tag>
                   <el-tag type="primary" v-if="scope.row.status == 1"
-                    >待付款</el-tag
+                    >Unpaid</el-tag
                   >
                   <el-tag type="warning" v-if="scope.row.status == 2"
-                    >预约中</el-tag
+                    >Paid</el-tag
                   >
                   <el-tag type="danger" v-if="scope.row.status == 3"
-                    >已完成</el-tag
+                    >Finished</el-tag
                   >
                 </template>
               </el-table-column>
-              <el-table-column prop="remark" label="备注"> </el-table-column>
-              <el-table-column prop="createTime" label="创建时间">
+              <el-table-column prop="remark" label="Note"> </el-table-column>
+              <el-table-column prop="createTime" label="CreateDate">
               </el-table-column>
             </el-table>
             <el-pagination
@@ -152,7 +152,7 @@ export default {
     },
     update() {
       if (this.ids.length != 1) {
-        this.$message.info("请选择一条数据");
+        this.$message.info("Please select");
         return;
       }
       this.showList = false;
@@ -163,7 +163,7 @@ export default {
     },
     del() {
       if (this.ids.length == 0) {
-        this.$message.info("请选择数据");
+        this.$message.info("Please select");
         return;
       }
       var that = this;
@@ -185,7 +185,7 @@ export default {
     complete(e){
         var that = this;
         if(this.ids.length != 1){
-          this.$message.info("请选择一条数据");
+          this.$message.info("Please select");
           return;
         }
         var id = this.ids[0];

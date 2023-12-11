@@ -40,8 +40,8 @@
                     </el-form-item>
                     <el-form-item label="Gender">
                         <el-radio-group v-model="member.gender">
-                          <el-radio label="0" value="0">女</el-radio>
-                          <el-radio label="1" value="1">男</el-radio>
+                          <el-radio label="0" value="0">F</el-radio>
+                          <el-radio label="1" value="1">M</el-radio>
                         </el-radio-group>
                     </el-form-item>
 

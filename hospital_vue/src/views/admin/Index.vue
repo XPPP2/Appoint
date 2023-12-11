@@ -15,7 +15,7 @@
                       </el-col>
                       <el-col :span="8">
                         <el-card shadow="always">
-                          User Number
+                          Account Number
                           <div style="font-size: 20px; margin-top: 10px; font-weight: blod">{{statistics.userTotal}}</div>
                         </el-card>
                       </el-col>
@@ -89,7 +89,7 @@ export default {
                     minInterval: 1,
                 },
                 series: [{
-                    name: 'Appointment Number',
+                    name: 'Appointment',
                     type:'line',
                     data: r.statistics.appointCountList.map(function(v){return v.count})
                 }]

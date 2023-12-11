@@ -9,14 +9,14 @@
 					<el-main>
                         <div v-if="showList">
                     <el-form :inline="true" :model="q">
-                        <el-form-item label="标题">
-                            <el-input v-model="q.title" placeholder="标题"></el-input>
+                        <el-form-item label="Topic">
+                            <el-input v-model="q.title" placeholder="Topic"></el-input>
                         </el-form-item>
                         <el-form-item>
-                            <el-button type="primary" @click="query">查询</el-button>
-                            <el-button type="warning" @click="add">新增</el-button>
-                            <el-button type="success" @click="update">修改</el-button>
-                            <el-button type="danger" @click="del">删除</el-button>
+                            <el-button type="primary" @click="query">Search</el-button>
+                            <el-button type="warning" @click="add">Add</el-button>
+                            <el-button type="success" @click="update">Modify</el-button>
+                            <el-button type="danger" @click="del">Delete</el-button>
                         </el-form-item>
                     </el-form>
     

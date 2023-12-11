@@ -9,14 +9,14 @@
         <el-main>
           <div v-if="showList">
             <el-form :inline="true" :model="q" class="demo-form-inline">
-              <el-form-item label="医生">
-                <el-input v-model="q.realName" placeholder="医生"></el-input>
+              <el-form-item label="Doctor">
+                <el-input v-model="q.realName" placeholder="Doctor"></el-input>
               </el-form-item>
               <el-form-item>
-                <el-button type="primary" @click="query">查询</el-button>
-                <el-button type="warning" @click="add">新增</el-button>
-                <el-button type="success" @click="update">修改</el-button>
-                <el-button type="danger" @click="del">删除</el-button>
+                <el-button type="primary" @click="query">Search</el-button>
+                <el-button type="warning" @click="add">Add</el-button>
+                <el-button type="success" @click="update">Modify</el-button>
+                <el-button type="danger" @click="del">Delete</el-button>
               </el-form-item>
             </el-form>
 
@@ -27,13 +27,13 @@
             >
               <el-table-column type="selection" width="55"> </el-table-column>
 
-              <el-table-column prop="doctor.realName" label="医生">
+              <el-table-column prop="doctor.realName" label="Doctor">
               </el-table-column>
-              <el-table-column prop="startTime" label="开始时间">
+              <el-table-column prop="startTime" label="Start">
               </el-table-column>
-              <el-table-column prop="endTime" label="结束时间">
+              <el-table-column prop="endTime" label="End">
               </el-table-column>
-              <el-table-column prop="maxPeople" label="预约人数">
+              <el-table-column prop="maxPeople" label="Seats">
               </el-table-column>
             </el-table>
             <el-pagination
@@ -49,8 +49,8 @@
           </div>
           <div v-if="!showList">
             <el-form :model="setting" label-width="120px">
-              <el-form-item label="医生">
-                <el-select v-model="setting.doctorId" placeholder="请选择">
+              <el-form-item label="Doctor">
+                <el-select v-model="setting.doctorId" placeholder="Please select">
                   <el-option
                     v-for="item in doctorList"
                     :key="item.id"
@@ -60,18 +60,18 @@
                   </el-option>
                 </el-select>
               </el-form-item>
-              <el-form-item label="开始时间">
+              <el-form-item label="Start time">
                 <el-input v-model="setting.startTime"></el-input>
               </el-form-item>
-              <el-form-item label="结束时间">
+              <el-form-item label="End time">
                 <el-input v-model="setting.endTime"></el-input>
               </el-form-item>
-              <el-form-item label="预约人数">
+              <el-form-item label="Seats number">
                 <el-input v-model="setting.maxPeople"></el-input>
               </el-form-item>
               <el-form-item>
-                <el-button type="primary" @click="onSubmit">保存</el-button>
-                <el-button @click="cancel">取消</el-button>
+                <el-button type="primary" @click="onSubmit">Save</el-button>
+                <el-button @click="cancel">Cancel</el-button>
               </el-form-item>
             </el-form>
           </div>
@@ -188,7 +188,7 @@ export default {
     //更新
     update() {
       if (this.ids.length != 1) {
-        this.$message.info("请选择一条数据");
+        this.$message.info("Please select");
         return;
       }
       this.showList = false;
@@ -203,7 +203,7 @@ export default {
     //删除
     del() {
       if (this.ids.length == 0) {
-        this.$message.info("请选择数据");
+        this.$message.info("Please select");
         return;
       }
       var that = this;

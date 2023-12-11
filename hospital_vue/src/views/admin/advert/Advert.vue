@@ -10,9 +10,9 @@
                     <div v-if="showList">
                     <el-form :inline="true" :model="q">
                         <el-form-item>
-                            <el-button type="primary" @click="add">新增</el-button>
-                            <el-button type="warning" @click="update">修改</el-button>
-                            <el-button type="danger" @click="del">删除</el-button>
+                            <el-button type="primary" @click="add">Add</el-button>
+                            <el-button type="warning" @click="update">Modify</el-button>
+                            <el-button type="danger" @click="del">Delete</el-button>
                         </el-form-item>
                     </el-form>
                         <el-table
@@ -25,7 +25,7 @@
                         </el-table-column>
                         <el-table-column
                             prop="picUrl"
-                            label="图片"
+                            label="Picture"
                             >
                             <template slot-scope="scope">
                                 <el-image
@@ -35,20 +35,20 @@
                         </el-table-column>
                         <el-table-column
                             prop="sort"
-                            label="排序"
+                            label="Order"
                             >
                         </el-table-column>
                         <el-table-column
                             prop="enable"
-                            label="状态">
+                            label="Status">
                             <template slot-scope="scope">
-                              <el-tag type="info" v-if="scope.row.enable == 0">禁用</el-tag>
-                              <el-tag type="primary" v-if="scope.row.enable == 1">启用</el-tag>
+                              <el-tag type="info" v-if="scope.row.enable == 0">Unable</el-tag>
+                              <el-tag type="primary" v-if="scope.row.enable == 1">Enable</el-tag>
                             </template>
                         </el-table-column>
                         <el-table-column
                             prop="createTime"
-                            label="创建时间"
+                            label="CreateDate"
                             >
                         </el-table-column>
                         </el-table>
@@ -64,7 +64,7 @@
                         </div>
                         <div v-if="!showList">
                         <el-form :model="advert" label-width="120px">
-                            <el-form-item label="图片">
+                            <el-form-item label="Headpic">
                                 <el-upload
                                 class="avatar-uploader"
                                 action="http://127.0.0.1:8080/api/fileupload/upload"
@@ -76,17 +76,17 @@
                             </el-form-item>
                             <el-form-item>
                                 <el-radio-group v-model="advert.enable">
-                                  <el-radio :label="0">禁用</el-radio>
-                                  <el-radio :label="1">启用</el-radio>
+                                  <el-radio :label="0">Unable</el-radio>
+                                  <el-radio :label="1">Enable</el-radio>
                                 </el-radio-group>
 
                             </el-form-item>
-                        <el-form-item label="排序">
+                        <el-form-item label="Order">
                             <el-input v-model="advert.sort"></el-input>
                         </el-form-item>
                         <el-form-item>
-                            <el-button type="primary" @click="onSubmit">保存</el-button>
-                            <el-button @click="cancel">取消</el-button>
+                            <el-button type="primary" @click="onSubmit">Save</el-button>
+                            <el-button @click="cancel">Cancel</el-button>
                         </el-form-item>
                         </el-form>
                         </div>

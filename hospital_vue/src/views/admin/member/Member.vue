@@ -8,8 +8,8 @@
                 <mainSidebar :active="active"></mainSidebar>
                 <el-main>
                     <el-form :inline="true" :model="q">
-                        <el-form-item label="NickName">
-                            <el-input v-model="q.nickname" placeholder="NickName"></el-input>
+                        <el-form-item label="Nickname">
+                            <el-input v-model="q.nickname" placeholder="Nickname"></el-input>
                         </el-form-item>
                         <el-form-item>
                             <el-button type="primary" @click="query">Search</el-button>
@@ -26,7 +26,7 @@
                         </el-table-column>
                         <el-table-column
                             prop="avatarUrl"
-                            label="HeadPicture"
+                            label="Headpic"
                             >
                             <template slot-scope="scope">
                                 <el-image
@@ -36,12 +36,12 @@
                         </el-table-column>
                         <el-table-column
                             prop="nickname"
-                            label="NickName"
+                            label="Nickname"
                             >
                         </el-table-column>
                         <el-table-column
                             prop="loginName"
-                            label="UserName"
+                            label="Username"
                             >
                         </el-table-column>
                         <el-table-column
@@ -114,7 +114,7 @@ export default {
       },
       del(){
         if(this.ids.length == 0){
-            this.$message.info("Please select one.");
+            this.$message.info("Please Select");
             return;
         }
         var that = this;

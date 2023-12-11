@@ -25,7 +25,7 @@
                       <el-input v-model="loginForm.password" placeholder="Password" type="password"></el-input>
                   </el-form-item>
                   <el-form-item>
-                      <el-button type="primary" @click="login"> User </el-button>
+                      <el-button type="primary" @click="login"> Login </el-button>
                       <el-button @click="register">Register</el-button>
                   </el-form-item>
                 </el-form>

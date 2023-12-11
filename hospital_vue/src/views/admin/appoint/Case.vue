@@ -9,14 +9,14 @@
         <el-main>
           <div v-if="showList">
             <el-form :inline="true" :model="q">
-              <el-form-item label="姓名">
-                <el-input v-model="q.realName" placeholder="姓名"></el-input>
+              <el-form-item label="Name">
+                <el-input v-model="q.realName" placeholder="Name"></el-input>
               </el-form-item>
               <el-form-item>
-                <el-button type="primary" @click="query">查询</el-button>
-                <el-button type="warning" @click="add">新增</el-button>
-                <el-button type="success" @click="update">修改</el-button>
-                <el-button type="danger" @click="del">删除</el-button>
+                <el-button type="primary" @click="query">Search</el-button>
+                <el-button type="warning" @click="add">Add</el-button>
+                <el-button type="success" @click="update">Modify</el-button>
+                <el-button type="danger" @click="del">Delete</el-button>
               </el-form-item>
             </el-form>
 
@@ -27,12 +27,12 @@
             >
               <el-table-column type="selection" width="55"> </el-table-column>
 
-              <el-table-column prop="member.realName" label="用户">
+              <el-table-column prop="member.realName" label="User">
               </el-table-column>
 
-              <el-table-column prop="result" label="结果"> </el-table-column>
-              <el-table-column prop="proposal" label="建议"> </el-table-column>
-              <el-table-column prop="createTime" label="时间">
+              <el-table-column prop="result" label="Result"> </el-table-column>
+              <el-table-column prop="proposal" label="Advice"> </el-table-column>
+              <el-table-column prop="createTime" label="Date">
               </el-table-column>
             </el-table>
             <el-pagination
@@ -48,8 +48,8 @@
           </div>
           <div v-if="!showList">
             <el-form :model="hcase" label-width="120px">
-              <el-form-item label="用户">
-                <el-select v-model="hcase.memberId" placeholder="请选择">
+              <el-form-item label="User">
+                <el-select v-model="hcase.memberId" placeholder="Please select">
                   <el-option
                     v-for="item in appointList"
                     :key="item.userId"
@@ -60,16 +60,16 @@
                 </el-select>
               </el-form-item>
 
-              <el-form-item label="结果">
+              <el-form-item label="Result">
                 <el-input v-model="hcase.result" type="textarea"></el-input>
               </el-form-item>
-              <el-form-item label="建议">
+              <el-form-item label="Advice">
                 <el-input v-model="hcase.proposal" type="textarea"></el-input>
               </el-form-item>
 
               <el-form-item>
-                <el-button type="primary" @click="onSubmit">保存</el-button>
-                <el-button @click="cancel">取消</el-button>
+                <el-button type="primary" @click="onSubmit">Save</el-button>
+                <el-button @click="cancel">Cancel</el-button>
               </el-form-item>
             </el-form>
           </div>
@@ -96,6 +96,7 @@ export default {
         limit: 10,
       },
       total: 0,
+      member: {}
     };
   },
   components: {
@@ -124,6 +125,18 @@ export default {
     formatNumber(n) {
       n = n.toString()
       return n[1] ? n : '0' + n
+    },
+    getUser() {
+      var that = this;
+      this.$axios.get(that.domain + "/api/member/info", {params: {}, headers:{ token: localStorage.getItem("ftoken") }}).then(
+        function(res){
+          var r = res.data;
+          console.log(r)
+          if(r.code == 0){
+            that.member = r.member;
+          }
+        }
+      )
     },
     queryAppoint() {
       var that = this;
@@ -194,7 +207,7 @@ export default {
     },
     update() {
       if (this.ids.length != 1) {
-        this.$message.info("请选择一条数据");
+        this.$message.info("Please select");
         return;
       }
       this.showList = false;
@@ -205,7 +218,7 @@ export default {
     },
     del() {
       if (this.ids.length == 0) {
-        this.$message.info("请选择数据");
+        this.$message.info("Please select");
         return;
       }
       var that = this;
@@ -243,6 +256,7 @@ export default {
   created() {
     this.query();
     this.queryAppoint();
+    this.getUser();
   },
 };
 </script>
