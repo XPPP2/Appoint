@@ -17,11 +17,7 @@ import com.wfuhui.common.utils.R;
 import com.wfuhui.modules.advert.entity.AdvertEntity;
 import com.wfuhui.modules.advert.service.AdvertService;
 
-/**
- * 广告
- * @author lzl
- * @email 2803180149@qq.com
- */
+
 @RestController
 @RequestMapping("/advert")
 public class AdvertController {

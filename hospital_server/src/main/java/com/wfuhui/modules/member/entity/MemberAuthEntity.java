@@ -3,12 +3,7 @@ package com.wfuhui.modules.member.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * 授权
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- */
+
 public class MemberAuthEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

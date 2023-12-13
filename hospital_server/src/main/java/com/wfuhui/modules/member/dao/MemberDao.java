@@ -6,12 +6,7 @@ import com.wfuhui.modules.member.entity.MemberEntity;
 import com.wfuhui.modules.sys.dao.BaseDao;
 
 
-/**
- * 会员
- * 
- * @author lzl
- * @email 2803180149@qq.com
- */
+
 @Mapper
 public interface MemberDao extends BaseDao<MemberEntity> {
 

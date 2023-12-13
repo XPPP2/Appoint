@@ -19,12 +19,7 @@ import com.wfuhui.common.utils.Query;
 import com.wfuhui.common.utils.R;
 
 
-/**
- * 挂号
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- */
+
 @RestController
 @RequestMapping("appoint")
 public class AppointController {

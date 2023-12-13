@@ -3,12 +3,6 @@ package com.wfuhui.modules.sys.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * 系统用户
- * 
- * @author lzl
- * @email 2803180149@qq.com
- */
 public class SysUserEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

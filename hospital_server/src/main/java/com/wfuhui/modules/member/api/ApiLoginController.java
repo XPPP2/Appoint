@@ -18,12 +18,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * 登录注册
- * 
- * @author lzl
- * @email 2803180149@qq.com
- */
+
 @RestController
 @RequestMapping("/api")
 public class ApiLoginController {

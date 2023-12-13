@@ -5,12 +5,7 @@ import com.wfuhui.modules.sys.entity.NoticeEntity;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 公告
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- */
+
 public interface NoticeService {
 	
 	NoticeEntity queryObject(Integer id);

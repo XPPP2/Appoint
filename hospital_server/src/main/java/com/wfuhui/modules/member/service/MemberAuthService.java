@@ -6,13 +6,6 @@ import java.util.Map;
 import com.wfuhui.modules.member.entity.MemberAuthEntity;
 import com.wfuhui.modules.member.entity.MemberEntity;
 
-/**
- * 授权
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- * @date 2018-11-04 08:58:33
- */
 public interface MemberAuthService {
 	
 	MemberAuthEntity queryObject(Integer id);

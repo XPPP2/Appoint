@@ -7,12 +7,7 @@ import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
 
-/**
- * 系统用户
- * 
- * @author lzl
- * @email 2803180149@qq.com
- */
+
 @Mapper
 public interface SysUserDao extends BaseDao<SysUserEntity> {
 	

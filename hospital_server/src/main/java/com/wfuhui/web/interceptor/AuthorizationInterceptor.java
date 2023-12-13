@@ -17,11 +17,7 @@ import com.wfuhui.common.annotation.Login;
 import com.wfuhui.common.exception.RException;
 import com.wfuhui.web.utils.JwtUtils;
 
-/**
- * 权限(Token)验证
- * @author lzl
- * @email 2803180149@qq.com
- */
+
 @Component
 public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
     @Autowired

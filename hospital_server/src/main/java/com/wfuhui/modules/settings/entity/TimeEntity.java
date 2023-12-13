@@ -4,13 +4,6 @@ import java.io.Serializable;
 import java.util.Date;
 
 
-
-/**
- * 预约时间
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- */
 public class TimeEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

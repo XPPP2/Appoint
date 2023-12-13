@@ -1,11 +1,6 @@
 package com.wfuhui.common.exception;
 
-/**
- * 自定义异常
- * 
- * @author lzl
- * @email 2803180149@qq.com
- */
+
 public class RException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
 	

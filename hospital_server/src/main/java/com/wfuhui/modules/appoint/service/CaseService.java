@@ -5,13 +5,7 @@ import com.wfuhui.modules.appoint.entity.CaseEntity;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 病例
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- * @date 2020-12-10 22:11:38
- */
+
 public interface CaseService {
 	
 	CaseEntity queryObject(Integer id);

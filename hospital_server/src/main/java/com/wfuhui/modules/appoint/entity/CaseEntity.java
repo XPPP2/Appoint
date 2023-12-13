@@ -6,12 +6,7 @@ import java.util.Date;
 import com.wfuhui.modules.hospital.entity.DoctorEntity;
 import com.wfuhui.modules.member.entity.MemberEntity;
 
-/**
- * 病例
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- */
+
 public class CaseEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

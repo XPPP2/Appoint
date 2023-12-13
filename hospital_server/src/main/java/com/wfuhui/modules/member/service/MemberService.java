@@ -5,12 +5,7 @@ import java.util.Map;
 
 import com.wfuhui.modules.member.entity.MemberEntity;
 
-/**
- * 会员
- * 
- * @author lzl
- * @email 2803180149@qq.com
- */
+
 public interface MemberService {
 	
 	MemberEntity queryObject(Long id);

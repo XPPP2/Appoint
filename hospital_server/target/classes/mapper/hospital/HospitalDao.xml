@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wfuhui.modules.hospital.dao.HospitalDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.wfuhui.modules.hospital.entity.HospitalEntity" id="hospitalMap">
+        <result property="id" column="id"/>
+        <result property="hospitalName" column="hospital_name"/>
+        <result property="picUrl" column="pic_url"/>
+        <result property="areaId" column="area_id"/>
+        <result property="remark" column="remark"/>
+        <result property="address" column="address"/>
+        <result property="mobile" column="mobile"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+	<select id="queryObject" resultType="com.wfuhui.modules.hospital.entity.HospitalEntity">
+		select h.* from hs_hospital h where h.id = #{value}
+	</select>
+
+	<select id="queryList" resultType="com.wfuhui.modules.hospital.entity.HospitalEntity">
+		select h.* from hs_hospital h
+		<where>
+			<if test="areaId != '' and areaId != null and areaId != -1">
+				h.area_id = #{areaId}
+			</if>
+		</where>
+        <choose>
+            <when test="sidx != null and sidx.trim() != ''">
+                order by ${sidx} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="queryTotal" resultType="int">
+		select count(*) from hs_hospital 
+	</select>
+	 
+	<insert id="save" parameterType="com.wfuhui.modules.hospital.entity.HospitalEntity" useGeneratedKeys="true" keyProperty="id">
+		insert into hs_hospital
+		(
+			`hospital_name`, 
+			`pic_url`, 
+			`area_id`, 
+			`remark`, 
+			`address`, 
+			`mobile`, 
+			`create_time`
+		)
+		values
+		(
+			#{hospitalName}, 
+			#{picUrl}, 
+			#{areaId}, 
+			#{remark}, 
+			#{address}, 
+			#{mobile}, 
+			#{createTime}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.wfuhui.modules.hospital.entity.HospitalEntity">
+		update hs_hospital 
+		<set>
+			<if test="hospitalName != null">`hospital_name` = #{hospitalName}, </if>
+			<if test="picUrl != null">`pic_url` = #{picUrl}, </if>
+			<if test="areaId != null">`area_id` = #{areaId}, </if>
+			<if test="remark != null">`remark` = #{remark}, </if>
+			<if test="address != null">`address` = #{address}, </if>
+			<if test="mobile != null">`mobile` = #{mobile}, </if>
+			<if test="createTime != null">`create_time` = #{createTime}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="delete">
+		delete from hs_hospital where id = #{value}
+	</delete>
+	
+	<delete id="deleteBatch">
+		delete from hs_hospital where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>

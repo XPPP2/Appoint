@@ -6,12 +6,7 @@ import org.apache.shiro.subject.Subject;
 
 import com.wfuhui.common.exception.RException;
 
-/**
- * Shiro工具类
- * 
- * @author lzl
- * @email 2803180149@qq.com
- */
+
 public class ShiroUtils {
 
 	public static Session getSession() {

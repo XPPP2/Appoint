@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wfuhui.modules.hospital.dao.DoctorDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.wfuhui.modules.hospital.entity.DoctorEntity" id="doctorMap">
+        <result property="id" column="id"/>
+        <result property="realName" column="real_name"/>
+        <result property="picUrl" column="pic_url"/>
+        <result property="mobile" column="mobile"/>
+        <result property="hospitalId" column="hospital_id"/>
+        <result property="deptId" column="dept_id"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+	<select id="queryObject" resultType="com.wfuhui.modules.hospital.entity.DoctorEntity">
+		select d.*, h.hospital_name as 'hospital.hospitalName', dd.dept_name 'dept.deptName' from hs_doctor d 
+		left join hs_hospital h on h.id = d.hospital_id
+		left join hs_dept dd on dd.id = d.dept_id where d.id = #{value}
+	</select>
+
+	<select id="queryList" resultType="com.wfuhui.modules.hospital.entity.DoctorEntity">
+		select d.*, h.hospital_name as 'hospital.hospitalName', dd.dept_name 'dept.deptName' from hs_doctor d 
+		left join hs_hospital h on h.id = d.hospital_id
+		left join hs_dept dd on dd.id = d.dept_id
+		<where>
+			<if test="realName != null and realName.trim() != ''">
+				and `real_name` like concat('%',#{realName},'%') 
+			</if>
+			<if test="deptId != null and deptId != ''">
+				and dept_id = #{deptId}
+			</if>
+		</where>
+        <choose>
+            <when test="sidx != null and sidx.trim() != ''">
+                order by ${sidx} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="queryTotal" resultType="int">
+		select count(*) from hs_doctor 
+		<where>
+			<if test="realName != null and realName.trim() != ''">
+				and `real_name` like concat('%',#{realName},'%') 
+			</if>
+		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.wfuhui.modules.hospital.entity.DoctorEntity" useGeneratedKeys="true" keyProperty="id">
+		insert into hs_doctor
+		(
+			`real_name`, 
+			`mobile`, 
+			`pic_url`, 
+			`hospital_id`, 
+			`dept_id`, 
+			`specialty`, 
+			`remark`, 
+			`create_time`
+		)
+		values
+		(
+			#{realName}, 
+			#{mobile}, 
+			#{picUrl}, 
+			#{hospitalId}, 
+			#{deptId}, 
+			#{specialty}, 
+			#{remark}, 
+			#{createTime}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.wfuhui.modules.hospital.entity.DoctorEntity">
+		update hs_doctor 
+		<set>
+			<if test="realName != null">`real_name` = #{realName}, </if>
+			<if test="mobile != null">`mobile` = #{mobile}, </if>
+			<if test="picUrl != null">`pic_url` = #{picUrl}, </if>
+			<if test="hospitalId != null">`hospital_id` = #{hospitalId}, </if>
+			<if test="deptId != null">`dept_id` = #{deptId}, </if>
+			<if test="specialty != null">`specialty` = #{specialty}, </if>
+			<if test="remark != null">`remark` = #{remark}, </if>
+			<if test="createTime != null">`create_time` = #{createTime}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="delete">
+		delete from hs_doctor where id = #{value}
+	</delete>
+	
+	<delete id="deleteBatch">
+		delete from hs_doctor where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>

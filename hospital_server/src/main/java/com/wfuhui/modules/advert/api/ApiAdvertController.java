@@ -14,9 +14,6 @@ import com.wfuhui.common.utils.R;
 import com.wfuhui.modules.advert.entity.AdvertEntity;
 import com.wfuhui.modules.advert.service.AdvertService;
 
-/**
- * 广告接口
- */
 @RestController
 @RequestMapping("/api/advert/")
 public class ApiAdvertController {

@@ -6,12 +6,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 预约时间
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- */
 public interface TimeService {
 	
 	TimeEntity queryObject(Integer id);

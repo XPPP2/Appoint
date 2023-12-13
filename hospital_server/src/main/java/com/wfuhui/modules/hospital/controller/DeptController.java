@@ -17,12 +17,7 @@ import com.wfuhui.modules.hospital.service.DeptService;
 import com.wfuhui.common.utils.Query;
 import com.wfuhui.common.utils.R;
 
-/**
- * 科室
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- */
+
 @RestController
 @RequestMapping("dept")
 public class DeptController {

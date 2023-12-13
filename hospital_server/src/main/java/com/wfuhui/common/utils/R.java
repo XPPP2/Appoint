@@ -4,12 +4,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * 返回数据
- * 
- * @author lzl
- * @email 2803180149@qq.com
- */
+
 public class R extends HashMap<String, Object> {
 	private static final long serialVersionUID = 1L;
 	

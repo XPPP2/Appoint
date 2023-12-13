@@ -3,12 +3,7 @@ package com.wfuhui.modules.hospital.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * 医院
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- */
+
 public class HospitalEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 

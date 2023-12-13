@@ -6,12 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import com.wfuhui.modules.member.entity.MemberAuthEntity;
 import com.wfuhui.modules.sys.dao.BaseDao;
 
-/**
- * 授权
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- */
+
 @Mapper
 public interface MemberAuthDao extends BaseDao<MemberAuthEntity> {
 

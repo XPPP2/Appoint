@@ -6,12 +6,6 @@ import java.util.Map;
 import com.wfuhui.modules.sys.entity.SysUserEntity;
 
 
-/**
- * 系统用户
- * 
- * @author lzl
- * @email 2803180149@qq.com
- */
 public interface SysUserService {
 
 	/**

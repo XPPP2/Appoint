@@ -22,11 +22,7 @@ import com.wfuhui.modules.appoint.service.AppointService;
 import com.wfuhui.modules.hospital.entity.DoctorEntity;
 import com.wfuhui.modules.appoint.entity.AppointEntity;
 
-/**
- * 挂号预约
- * @author lzl
- *
- */
+
 @RestController
 @RequestMapping("/api/appoint/")
 public class ApiAppintController {

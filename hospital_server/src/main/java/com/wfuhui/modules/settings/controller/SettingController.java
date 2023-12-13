@@ -16,14 +16,6 @@ import com.wfuhui.common.utils.Query;
 import com.wfuhui.common.utils.R;
 
 
-
-
-/**
- * 预约设置
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- */
 @RestController
 @RequestMapping("setting")
 public class SettingController {

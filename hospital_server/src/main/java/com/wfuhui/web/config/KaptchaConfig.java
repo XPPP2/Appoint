@@ -8,12 +8,6 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Properties;
 
 
-/**
- * 生成验证码配置
- *
- * @author lzl
- * @email 2803180149@qq.com
- */
 @Configuration
 public class KaptchaConfig {
 

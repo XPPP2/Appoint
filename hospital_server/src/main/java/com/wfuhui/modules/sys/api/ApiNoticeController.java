@@ -14,12 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 公告
- * 
- * @author lzl
- * @email 2803180149@qq.com
- */
+
 @RestController
 @RequestMapping("/api/notice")
 public class ApiNoticeController {

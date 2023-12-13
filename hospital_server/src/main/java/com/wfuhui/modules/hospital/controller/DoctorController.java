@@ -18,12 +18,6 @@ import com.wfuhui.common.utils.Query;
 import com.wfuhui.common.utils.R;
 
 
-/**
- * 医生
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- */
 @RestController
 @RequestMapping("doctor")
 public class DoctorController {

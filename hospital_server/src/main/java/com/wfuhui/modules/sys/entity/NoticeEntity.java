@@ -5,12 +5,6 @@ import java.util.Date;
 
 
 
-/**
- * 公告
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- */
 public class NoticeEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

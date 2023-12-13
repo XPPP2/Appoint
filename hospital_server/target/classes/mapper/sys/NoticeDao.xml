@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wfuhui.modules.sys.dao.NoticeDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+	<resultMap type="com.wfuhui.modules.sys.entity.NoticeEntity"
+		id="messageMap">
+		<result property="id" column="id" />
+		<result property="title" column="title" />
+		<result property="content" column="content" />
+		<result property="createTime" column="create_time" />
+	</resultMap>
+
+	<select id="queryObject"
+		resultType="com.wfuhui.modules.sys.entity.NoticeEntity">
+		select * from sys_notice where id = #{value}
+	</select>
+
+	<select id="queryList"
+		resultType="com.wfuhui.modules.sys.entity.NoticeEntity">
+		select * from sys_notice
+		<choose>
+			<when test="sidx != null and sidx.trim() != ''">
+				order by ${sidx} ${order}
+			</when>
+			<otherwise>
+				order by id desc
+			</otherwise>
+		</choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+
+	<select id="queryTotal" resultType="int">
+		select count(*) from
+		sys_notice
+	</select>
+
+	<insert id="save"
+		parameterType="com.wfuhui.modules.sys.entity.NoticeEntity"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into sys_notice
+		(
+		`title`,
+		`content`,
+		`create_time`
+		)
+		values
+		(
+		#{title},
+		#{content},
+		#{createTime}
+		)
+	</insert>
+
+	<update id="update"
+		parameterType="com.wfuhui.modules.sys.entity.NoticeEntity">
+		update sys_notice
+		<set>
+			<if test="title != null">`title` = #{title}, </if>
+			<if test="content != null">`content` = #{content}, </if>
+			<if test="createTime != null">`create_time` = #{createTime}</if>
+		</set>
+		where id = #{id}
+	</update>
+
+	<delete id="delete">
+		delete from sys_notice where id = #{value}
+	</delete>
+
+	<delete id="deleteBatch">
+		delete from sys_notice where id in
+		<foreach item="id" collection="array" open="(" separator=","
+			close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>

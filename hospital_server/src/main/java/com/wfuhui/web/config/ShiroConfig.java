@@ -16,12 +16,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-/**
- * Shiro配置
- *
- * @author lzl
- * @email 2803180149@qq.com
- */
+
 @Configuration
 public class ShiroConfig {
 

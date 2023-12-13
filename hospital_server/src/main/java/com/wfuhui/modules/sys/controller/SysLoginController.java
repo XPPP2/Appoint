@@ -25,12 +25,6 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Map;
 
-/**
- * 登录相关
- * 
- * @author lzl
- * @email 2803180149@qq.com
- */
 @RestController
 public class SysLoginController {
 	

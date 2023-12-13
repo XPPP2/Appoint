@@ -9,12 +9,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.wfuhui.web.interceptor.AuthorizationInterceptor;
 
-/**
- * MVC配置
- *
- * @author lzl
- * @email 2803180149@qq.com
- */
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
     @Autowired

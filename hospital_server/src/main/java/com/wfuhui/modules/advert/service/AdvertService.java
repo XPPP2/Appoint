@@ -6,11 +6,7 @@ import java.util.Map;
 import com.wfuhui.modules.advert.entity.AdvertEntity;
 
 
-/**
- * 
- * @author lzl
- * @email 2803180149@qq.com
- */
+
 public interface AdvertService {
 	
 	AdvertEntity queryObject(Integer id);

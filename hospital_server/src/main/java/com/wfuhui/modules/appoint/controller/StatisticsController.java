@@ -18,12 +18,7 @@ import com.wfuhui.modules.member.service.MemberService;
 import com.wfuhui.modules.appoint.service.AppointService;
 
 
-/**
- * 分类
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- */
+
 @RestController
 @RequestMapping("statistics")
 public class StatisticsController {

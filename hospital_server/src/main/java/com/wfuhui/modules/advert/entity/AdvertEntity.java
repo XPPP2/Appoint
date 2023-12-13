@@ -3,13 +3,7 @@ package com.wfuhui.modules.advert.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * Banner
- * 
- * @author lzl
- * @email 2803180149@qq.com
- * @date 2017-07-14 13:43:12
- */
+
 public class AdvertEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 

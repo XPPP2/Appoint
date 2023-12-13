@@ -18,13 +18,7 @@ import com.wfuhui.common.utils.Query;
 import com.wfuhui.common.utils.R;
 
 
-/**
- * 病例
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- * @date 2020-12-10 22:11:38
- */
+
 @RestController
 @RequestMapping("case")
 public class CaseController{

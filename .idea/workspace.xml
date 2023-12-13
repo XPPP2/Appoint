@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="81f810d0-45aa-4d9d-a828-69fa4c6c11fc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/common/annotation/AuthIgnore.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/common/annotation/AuthIgnore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/common/annotation/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/common/annotation/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/common/exception/RException.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/common/exception/RException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/common/utils/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/common/utils/DateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/common/utils/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/common/utils/Query.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/common/utils/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/common/utils/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/advert/api/ApiAdvertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/advert/api/ApiAdvertController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/advert/controller/AdvertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/advert/controller/AdvertController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/advert/dao/AdvertDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/advert/dao/AdvertDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/advert/entity/AdvertEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/advert/entity/AdvertEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/advert/service/AdvertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/advert/service/AdvertService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/api/ApiAppintController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/api/ApiAppintController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/controller/AppointController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/controller/AppointController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/controller/CaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/controller/CaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/controller/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/controller/StatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/dao/AppointDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/dao/AppointDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/dao/CaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/dao/CaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/entity/AppointEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/entity/AppointEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/entity/CaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/entity/CaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/service/AppointService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/service/AppointService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/service/CaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/appoint/service/CaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/controller/DeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/controller/DeptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/controller/DoctorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/controller/HospitalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/controller/HospitalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/dao/DeptDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/dao/DeptDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/dao/DoctorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/dao/DoctorDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/dao/HospitalDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/dao/HospitalDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/entity/DeptEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/entity/DeptEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/entity/DoctorEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/entity/DoctorEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/entity/HospitalEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/entity/HospitalEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/service/DeptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/service/DeptService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/service/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/service/DoctorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/service/HospitalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/hospital/service/HospitalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/api/ApiLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/api/ApiLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/dao/MemberAuthDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/dao/MemberAuthDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/dao/MemberDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/entity/MemberAuthEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/entity/MemberAuthEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/entity/MemberEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/entity/MemberEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/service/MemberAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/service/MemberAuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/member/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/controller/SettingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/controller/SettingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/controller/TimeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/controller/TimeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/dao/SettingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/dao/SettingDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/dao/TimeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/dao/TimeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/entity/SettingEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/entity/SettingEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/entity/TimeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/entity/TimeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/service/SettingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/service/SettingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/service/TimeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/settings/service/TimeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/api/ApiNoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/api/ApiNoticeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/controller/NoticeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/controller/SysLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/controller/SysLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/controller/SysUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/dao/BaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/dao/BaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/dao/NoticeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/dao/NoticeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/dao/SysUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/dao/SysUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/entity/NoticeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/entity/NoticeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/entity/SysUserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/entity/SysUserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/service/NoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/service/NoticeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/service/SysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/modules/sys/service/SysUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/web/config/KaptchaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/web/config/KaptchaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/web/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/web/config/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/web/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/web/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/web/interceptor/AuthorizationInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/web/interceptor/AuthorizationInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/web/utils/IPUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/web/utils/IPUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/web/utils/ShiroUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/hospital_server/src/main/java/com/wfuhui/web/utils/ShiroUtils.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ZV4TjDCLssoZtYtYxkKZZQ4soG" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Ares/Desktop/CSYE7230/AppointHospital",
+    "spring.configuration.checksum": "ed48adae708e5064f42cd492e35bae5a"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="HospitalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="hospital_server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wfuhui.HospitalApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81f810d0-45aa-4d9d-a828-69fa4c6c11fc" name="Changes" comment="" />
+      <created>1702493923066</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702493923066</updated>
+      <workItem from="1702493930740" duration="1258000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

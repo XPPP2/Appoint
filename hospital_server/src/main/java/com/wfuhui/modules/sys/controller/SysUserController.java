@@ -12,12 +12,6 @@ import com.wfuhui.modules.sys.service.SysUserService;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 系统用户
- * 
- * @author lzl
- * @email 2803180149@qq.com
- */
 @RestController
 @RequestMapping("/sys/user")
 public class SysUserController {

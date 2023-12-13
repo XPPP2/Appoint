@@ -12,12 +12,7 @@ import com.wfuhui.modules.hospital.entity.DoctorEntity;
 import com.wfuhui.modules.hospital.entity.HospitalEntity;
 import com.wfuhui.modules.member.entity.MemberEntity;
 
-/**
- * 挂号
- * 
- * @author lizhengle
- * @email 2803180149@qq.com
- */
+
 public class AppointEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 

@@ -16,12 +16,6 @@ import com.wfuhui.modules.member.entity.MemberEntity;
 import com.wfuhui.modules.member.service.MemberService;
 
 
-/**
- * 会员
- * 
- * @author lzl
- * @email 2803180149@qq.com
- */
 @RestController
 @RequestMapping("/member")
 public class MemberController {
